@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-java.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-python.js"></script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <script type="text/javascript" src="/eel.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script defer type="text/javascript" src="script.js"></script>
+
+    </head>
+    <body> 
+
+    
+        <!-- ################ Sidebar - container ################### -->
+        <div class="sidebar">
+            
+            <div class="sidebarcontent">
+
+                <div class="llmButtonsContainer sidebarBackgroundColorComponents">
+                    <button id="loadModel" class="button sidebarElement" onclick="loadModel()">Load Model</button>
+                    <button id="unloadModel" class="button sidebarElement" onclick="unloadModel()">Unload Model</button>
+                </div>
+                
+                <div id="stil" class="sidebarElement">
+
+                    <!-- ################ Settings-container ################### -->
+                    <div id="button-container" class = "sidebarBackgroundColorComponents">
+
+                        <p class="stilSetting">Unterhaltungsstil wählen</p>
+
+
+                        <div class="button-group1">
+                            <button class="selectable-button group1" onclick="selectButton(1, 'group1')">Kreativ</button>
+                            <button class="selectable-button group1" onclick="selectButton(2, 'group1')">Ausgewogen</button>
+                            <button class="selectable-button group1" onclick="selectButton(3, 'group1')">Genau</button>
+                        </div>
+                        <div class="button-group2">
+                            <button class="selectable-button group2" onclick="selectButton(1, 'group2')">Humorvoll</button>
+                            <button class="selectable-button group2" onclick="selectButton(2, 'group2')">Sachlich</button>
+                            <button class="selectable-button group2" onclick="selectButton(3, 'group2')">Ernst</button>
+                        </div>
+
+                        <div class="button-group3">
+                            <button class="selectable-button group3" onclick="selectButton(1, 'group3')">Kurz</button>
+                            <button class="selectable-button group3" onclick="selectButton(2, 'group3')">Mittellang</button>
+                            <button class="selectable-button group3" onclick="selectButton(3, 'group3')">Detaliert</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="systemPrompt sidebarBackgroundColorComponents">
+                    <p class="stilSetting systemPromptHeader">Anweisungen</p>
+                    <textarea class="systemPromptArea">Du bist ein hilfreicher Assistent namens "Diesel-Sören". Deine Aufgabe ist es alle anliegen und Fragen des Nutzer ordnungsgemäß, nett und möglichst genau zu erfüllen. Antworte in einer angemessenen länge aber nicht zu lang.</textarea>
+                </div>
+
+                <!-- ################ Settings-container ################### -->
+                <div class="slider-container sidebarElement">
+                    <input type="range" min="8" max="4048" value="2048" class="slider " id="mySlider" onchange="updateValue(this.value)">
+                    <p>Value: <span id="sliderValue">50</span></p>
+                </div>
+
+
+                <button id="toggleSidebarBtn">‹</button>
+
+                <button id="Settings">
+                    <span class="icon">⚙</span>
+                    <span class="text">Settings</span>
+                </button>
+            </div>
+        </div>
+        <!-- ################ Sidebar - container ################### -->
+
+
+
+
+
+        <div class="content_frame">  
+
+            <div class="input">
+                <textarea id="textInput" class="font" onkeydown="handleKeyPress(event)" oninput="adjustTextareaHeight(this)" placeholder="Type message hier ..." autocomplete="off"></textarea>
+                <button id="submitButton" class="button inputButton textInput">➤</button>
+            </div>
+
+            <div class="header">
+
+                <details>
+                    <summary>Details</summary>
+
+                    <summary>
+                        <button>Llama-3</button>
+                    </summary>
+
+                    <summary>
+                        <button>Llama-2</button>
+                    </summary>
+                    <summary>
+                        <button>Mistral-v0.1</button>
+                    </summary>
+                    <summary>
+                        <button>Mistral-v0.2</button>
+                    </summary>
+
+
+                  </details>
+
+                <p id="startText" > </p>
+            </div>
+
+
+
+
+        <!-- ################ Chatbot - container ################### -->
+
+
+            
+            <div class="container" id="container">  
+                
+                <!--
+                <div class="output-container">
+
+                    <div class="MessageIconAI">
+                        <p class="botResponseTextIcon">☺</p>
+                    </div>
+
+                    <div class="botResponseTextContainer">
+
+                        <div class="botResponseTextHead">
+                            <span class="botResponseTextAI">You</span>                        
+                        </div>
+                    
+                        <div class="botResponse">
+                            <span class="botResponseText font">Hier ist der Text  Hier ist der TextHier ist der TextHier ist der TextHier ist der TextHier ist der TextHier ist der TextHier ist der Text</span>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+        <!-- ################ Chatbot - container ################### -->
+
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                    Prism.highlightAll();
+                });
+
+
+            // Nachdem die Seite geladen wurde, rufen Sie Prism.highlightAll() auf, um Prism auf alle Codeblöcke anzuwenden
+            window.onload = function() {
+                Prism.highlightAll();
+            };
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
