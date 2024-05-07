@@ -1,3 +1,12 @@
+
+# Project: SimpleLocalAIChat  
+
+## Infos  
+Llama-cpp-python is used to run the language model: https://github.com/abetlen/llama-cpp-python.
+
+
+
+
 https://github.com/Snens98/LocalChat/assets/116456908/0fbc7673-d1e5-4c38-9ed1-3a65c29e36ea  
 
 
