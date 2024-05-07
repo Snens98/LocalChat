@@ -1,3 +1,6 @@
+https://github.com/Snens98/LocalChat/assets/116456908/0fbc7673-d1e5-4c38-9ed1-3a65c29e36ea  
+
+
 ![Screen](https://github.com/Snens98/LocalChat/assets/116456908/cdbb4cca-36cc-4112-945d-6f11a9ae8190)  
 
 
