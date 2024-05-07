@@ -4,6 +4,7 @@
 ## Infos  
 Llama-cpp-python is used to run the language model: https://github.com/abetlen/llama-cpp-python.  
 Eel is used so that the Python code can communicate with the frontend: https://github.com/python-eel/Eel.  
+
   
 
 
