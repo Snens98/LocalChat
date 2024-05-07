@@ -7,7 +7,11 @@ Eel is used so that the Python code can communicate with the frontend: https://g
 
 The standard language model is Llama3-Instruct: https://ai.meta.com/blog/meta-llama-3/.  
 A quantized version is used, which can be run with 8 GB of graphics memory:
-https://huggingface.co/lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF
+https://huggingface.co/lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF.  
+  
+The model uses markdown for formatting. marked.js is used to convert to HTML tags: https://marked.js.org/.  
+  
+The output of the language model is output token by token during generation.  
 
   
 
