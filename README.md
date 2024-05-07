@@ -2,11 +2,13 @@
 # Project: SimpleLocalAIChat  
 
 ## Infos  
-Llama-cpp-python is used to run the language model: https://github.com/abetlen/llama-cpp-python.
+Llama-cpp-python is used to run the language model: https://github.com/abetlen/llama-cpp-python.  
+Eel is used so that the Python code can communicate with the frontend: https://github.com/python-eel/Eel.  
+  
 
 
 
-
+  
 https://github.com/Snens98/LocalChat/assets/116456908/0fbc7673-d1e5-4c38-9ed1-3a65c29e36ea  
 
 
