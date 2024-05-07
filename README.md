@@ -7,8 +7,7 @@ Eel is used so that the Python code can communicate with the frontend: https://g
   
 
 
-
-  
+## Video   
 https://github.com/Snens98/LocalChat/assets/116456908/0fbc7673-d1e5-4c38-9ed1-3a65c29e36ea  
 
 
