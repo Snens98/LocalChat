@@ -5,7 +5,3 @@
 
 
 ![Screenshot 2024-05-06 155229](https://github.com/Snens98/LocalChat/assets/116456908/77dc35f7-d23c-4395-b05d-035cd64fac9a)  
-
-
-
-![localhost_8080_index html2024-05-0714-57-54-ezgif com-video-to-gif-converter](https://github.com/Snens98/LocalChat/assets/116456908/d4042cf2-d09d-49b8-ac7d-1b000fb18466)
