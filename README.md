@@ -13,7 +13,7 @@ The model uses markdown for formatting. marked.js is used to convert to HTML tag
   
 The output of the language model is output token by token during generation.  
 
-\
+<br>  
   
   
 
