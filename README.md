@@ -5,6 +5,10 @@
 Llama-cpp-python is used to run the language model: https://github.com/abetlen/llama-cpp-python.  
 Eel is used so that the Python code can communicate with the frontend: https://github.com/python-eel/Eel.  
 
+The standard language model is Llama3-Instruct: https://ai.meta.com/blog/meta-llama-3/.  
+A quantized version is used to run with 8GB of graphics memory:
+https://huggingface.co/lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF
+
   
 
 
