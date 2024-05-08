@@ -53,7 +53,7 @@
                         <div class="button-group3">
                             <button class="selectable-button group3" onclick="selectButton(1, 'group3')">Kurz</button>
                             <button class="selectable-button group3" onclick="selectButton(2, 'group3')">Mittellang</button>
-                            <button class="selectable-button group3" onclick="selectButton(3, 'group3')">Detaliert</button>
+                            <button class="selectable-button group3" onclick="selectButton(3, 'group3')">Detailliert</button>
                         </div>
 
                     </div>
@@ -65,12 +65,12 @@
                     <textarea class="systemPromptArea">Du bist ein hilfreicher Assistent namens "Diesel-Sören". Deine Aufgabe ist es alle anliegen und Fragen des Nutzer ordnungsgemäß, nett und möglichst genau zu erfüllen. Antworte in einer angemessenen länge aber nicht zu lang.</textarea>
                 </div>
 
-                <!-- ################ Settings-container ################### -->
+                <!-- ################ Settings-container ################### 
                 <div class="slider-container sidebarElement">
                     <input type="range" min="8" max="4048" value="2048" class="slider " id="mySlider" onchange="updateValue(this.value)">
                     <p>Value: <span id="sliderValue">50</span></p>
                 </div>
-
+                -->
 
                 <button id="toggleSidebarBtn">‹</button>
 
@@ -89,12 +89,13 @@
         <div class="content_frame">  
 
             <div class="input">
-                <textarea id="textInput" class="font" onkeydown="handleKeyPress(event)" oninput="adjustTextareaHeight(this)" placeholder="Type message hier ..." autocomplete="off"></textarea>
+                <textarea id="textInput" class="font" onkeydown="handleKeyPress(event)" oninput="adjustTextareaHeight(this)" placeholder="Type message here ..." autocomplete="off"></textarea>
                 <button id="submitButton" class="button inputButton textInput">➤</button>
             </div>
 
             <div class="header">
 
+                <!--
                 <details>
                     <summary>Details</summary>
 
@@ -114,6 +115,7 @@
 
 
                   </details>
+                  -->
 
                 <p id="startText" > </p>
             </div>
