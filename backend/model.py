@@ -1,15 +1,8 @@
+
 from huggingface_hub import hf_hub_download
 from llama_cpp import Llama
-import sys
+import backend.Global as Global
 import eel
-import os
-import Global
-import re
-
-
-
-
-
 
 
 repo_id = "PrunaAI/Phi-3-mini-128k-instruct-GGUF-Imatrix-smashed"
@@ -27,10 +20,6 @@ model_file_name="Meta-Llama-3-8B-Instruct-Q6_K.gguf"
 
 template="|begin_of_text|><|start_header_id|>system<|end_header_id|>\n{SystemPrompt}<|eot_id|>\n\n<|start_header_id|>user<|end_header_id|>\n{UserPrompt}<|eot_id|>\n\n<|start_header_id|>assistant<|end_header_id|><|eot_id|>"
 
-
-
-
-eel.init('web', allowed_extensions=['.js', '.html', '.css'])
 
 
 
@@ -132,30 +121,3 @@ def receiveTextAndEnter(text="", is_enter_pressed=False):
 @eel.expose
 def unloadModel():
     Global.set_LLM(None)
-
-        
-        
-
-
-
-
-def onStart():
-    print("Started APP")
-
-
-        
-
-def main():
-
-    eel.start('index.html', port = 8080, shutdown_delay= 0.0, app_mode=True, close_callback= onStart())
-
-
-
-
-
-if __name__ == '__main__':
-    main()
-
-
-
-
