@@ -11,7 +11,7 @@ https://huggingface.co/lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF.
   
 The model uses markdown for formatting. marked.js is used to convert to HTML tags: https://marked.js.org/.  
   
-The output of the language model is output token by token during generation.  
+The output of the language model is generated token by token.  
 
 <br>  
   
